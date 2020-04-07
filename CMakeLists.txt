@@ -15,3 +15,4 @@ set_target_properties(tutorial PROPERTIES LINKER_LANGUAGE C)
 
 add_subdirectory(src/Lesson_001)
 add_subdirectory(src/Arrays)
+add_subdirectory(src/Functions)
