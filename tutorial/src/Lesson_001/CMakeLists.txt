@@ -1,0 +1,1 @@
+add_executable(lesson_001 "lesson_001.c")
