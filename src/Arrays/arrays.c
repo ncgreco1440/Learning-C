@@ -25,6 +25,9 @@ int main() {
     printf(" %d", ndigit[i]);
   }
   printf(", whitespace = %d, other = %d\n", nwhite, nother);
+
+  printf("Press Enter to end the program");
+  getchar();
   
   return 0;
 }
