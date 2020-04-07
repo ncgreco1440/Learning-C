@@ -1,10 +1,16 @@
+﻿# CMakeList.txt : CMake project for tutorial, include source and define
+# project specific logic here.
+#
 cmake_minimum_required(VERSION 3.15)
 
 project(
-  tutorial 
-  LANGUAGE C 
+  tutorial
   VERSION 1.0.0
-  DESCRIPTION "A tutorial on the C programming language"
-  HOMEPAGE_URL "https://github.com/ncgreco1440/Learning-C")
+  LANGUAGES C)
 
-add_executable(main src/main.c)
+# Add source to this project's executable.
+add_executable(tutorial src/main.c)
+
+set_target_properties(tutorial PROPERTIES LINKER_LANGUAGE C)
+
+add_subdirectory(src/Lesson_001)
