@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-  int proc = GetCurrentProcessId();
+  int proc = (int)GetCurrentProcessId();
   char procStr[10];
 
   _itoa_s(proc, procStr, 10, 10);

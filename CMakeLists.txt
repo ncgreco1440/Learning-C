@@ -11,7 +11,11 @@ project(
 # Add source to this project's executable.
 add_executable(tutorial src/main.c)
 
-set_target_properties(tutorial PROPERTIES LINKER_LANGUAGE C)
+if (CMAKE_C_COMPILER MATCHES "clang-cl")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
+elseif (CMAKE_C_COMPILER MATCHES "cl")
+  set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /W4")
+endif()
 
 add_subdirectory(src/Lesson_001)
 add_subdirectory(src/Arrays)
