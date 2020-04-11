@@ -19,7 +19,7 @@ int main() {
       state = OUT;
     } else if (state == OUT) {
       // Since state is in OUT mode, change it to IN mode and increment the word count
-      // We will come back into this block when we encounter the next newline, space, or tab char
+      // We will come back into this block when we encounter the newline, space, or tab char
       state = IN;
       ++nw;
     }
